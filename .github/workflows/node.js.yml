@@ -26,7 +26,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: npm ci
-      - run: quasar build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
