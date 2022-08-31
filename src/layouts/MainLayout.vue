@@ -1,7 +1,7 @@
 <template>
-  <q-layout view="lHh lpr lFf" class="container">
+  <q-layout view="lHh lpr lFf">
     <q-header>
-      <q-toolbar class="toolbar bg-dark container">
+      <q-toolbar class="toolbar justify-around bg-dark">
         <q-list dark>
           <q-item clickable v-ripple @click="$router.push('/')">
             <q-item-section>
