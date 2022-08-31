@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: ['master']
+    branches: ["master"]
   pull_request:
-    branches: ['master']
+    branches: ["master"]
 
 jobs:
   build:
@@ -24,13 +24,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+          cache: "npm"
       - run: npm ci
-      - run: npm run build
-
+      - run: quasar build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           folder: ./dist/spa # The folder the action should deploy.
-    
+
