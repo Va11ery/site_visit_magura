@@ -21,12 +21,9 @@
         </q-card-section>
 
         <q-card-actions class="q-pb-xl">
-          <q-btn outline color="secondary" style="width: 200px" size="lg"
-            >Кнопка 1
+          <q-btn outline color="secondary" style="width: 300px" size="lg"
+            >Оставить заявку
           </q-btn>
-          <q-btn outline color="deep-orange" style="width: 200px" size="lg"
-            >Кнопка 2</q-btn
-          >
         </q-card-actions>
       </q-card>
     </div>
@@ -125,6 +122,24 @@
         >
           НАША КОМАНДА
         </div>
+        <div
+          class="row q-col-gutter-xl q-pt-xl"
+          style="font-size: 20px; font-weight: 500"
+        >
+          <div class="col col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            Команда опытных сотрудников, которая обеспечит надежную охрану вашей
+            жизни, а также возьмет на себя ответственность за сохранение
+            собственности, грузов, объектов, офисов, мероприятий и др. Также
+            применяет индивидуальный подход к каждому клиенту и действует на
+            основании законодательства РФ.
+          </div>
+          <div class="col col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            Сотрудники офиса постоянно повышают свою квалификацию для
+            стратегического развития охранной организации. Наши охранники
+            повышают свою квалификацию доказывая уровень своих знаний и умений
+            для оказания качественных охранных услуг.
+          </div>
+        </div>
       </div>
     </div>
     <!-- /////////////////////////////////////////////////////////////////////-->
@@ -142,7 +157,7 @@
           v-for="(i, index) in card_my_teams"
           :key="index"
         >
-          <q-card class="my-card" dark>
+          <q-card class="my-card bg-grey-10" dark flat>
             <q-icon
               :name="i.icon.name"
               size="8rem"
@@ -150,7 +165,7 @@
               :color="i.icon.color"
             />
             <q-card-section>
-              <div class="text-h6">{{ i.title }}</div>
+              <div class="text-h6" style="">{{ i.title }}</div>
             </q-card-section>
             <q-card-section>{{ i.text }}</q-card-section>
             <q-card-actions align="right">
@@ -233,7 +248,7 @@ export default defineComponent({
         },
         {
           title: "Перевозка лекарственных и психотропных веществ",
-          text: "Охранная Организация КГБ имеет лицензию на перевозку лекарственных средств и психотропных веществ, также у нас есть специализированный фармацевт",
+          text: "Охранная организация имеет лицензию на перевозку лекарственных средств и психотропных веществ",
           icon: {
             name: "admin_panel_settings",
             color: "indigo",
@@ -278,6 +293,10 @@ export default defineComponent({
   border-left: 0px solid !important;
 }
 .my-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .ptb-100 {
   padding-top: 100px;

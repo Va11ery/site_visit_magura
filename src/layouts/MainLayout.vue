@@ -51,12 +51,48 @@
 
     <q-page-container>
       <router-view />
+
+      <q-page-scroller
+        position="bottom-right"
+        :scroll-offset="150"
+        :offset="[18, 18]"
+      >
+        <q-btn fab icon="keyboard_arrow_up" color="accent" />
+      </q-page-scroller>
     </q-page-container>
-    <q-footer class="bg-dark">
-      <q-toolbar>
-        <q-toolbar-title>Footer</q-toolbar-title>
-      </q-toolbar>
-    </q-footer>
+
+    <q-list
+      class="bg-dark"
+      style="padding-bottom: 100px; padding-top: 100px"
+      dark
+    >
+      <div class="container">
+        <div
+          style="
+            font-size: 3vw;
+            line-height: 3vw;
+            font-weight: 700;
+            text-transform: uppercase;
+          "
+        >
+          Контактная информация
+        </div>
+        <div class="row q-col-gutter-xl q-pt-xl">
+          <div
+            class="col col-xs-12 col-sm-6 col-md-4 col-lg-3"
+            v-for="(i, index) in card_info"
+            :key="index"
+          >
+            <q-card class="my-card bg-dark" dark flat>
+              <q-card-section class="text-orange">
+                <div class="text-h6" style="">{{ i.title }}</div>
+              </q-card-section>
+              <q-card-section>{{ i.text }}</q-card-section>
+            </q-card>
+          </div>
+        </div>
+      </div>
+    </q-list>
   </q-layout>
 </template>
 
@@ -64,6 +100,40 @@
 import { defineComponent, ref } from "vue";
 export default defineComponent({
   name: "MainLayout",
+  data() {
+    return {
+      card_info: [
+        {
+          title: "Номер телефона: ",
+          text: "3213111",
+          icon: {
+            name: "",
+          },
+        },
+        {
+          title: "Электронная почта: ",
+          text: "3213111",
+          icon: {
+            name: "",
+          },
+        },
+        {
+          title: "Время работы: ",
+          text: "3213111",
+          icon: {
+            name: "",
+          },
+        },
+        {
+          title: "Наш адрес: ",
+          text: "3213111",
+          icon: {
+            name: "",
+          },
+        },
+      ],
+    };
+  },
   setup() {
     return {
       tab: ref(""),

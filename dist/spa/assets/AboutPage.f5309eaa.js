@@ -1,0 +1,1 @@
+import{Q as e}from"./QPage.cac2dd19.js";import{_ as a,F as t,G as s,H as o,I as r,K as n}from"./index.a693fd50.js";import"./render.a7e15821.js";const c=t({name:"AboutPage"}),d=n("div",null,"dasdaasdaas",-1);function _(f,p,i,l,m,u){return s(),o(e,{class:"flex flex-center"},{default:r(()=>[d]),_:1})}var h=a(c,[["render",_]]);export{h as default};
