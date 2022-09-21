@@ -298,10 +298,7 @@ export default defineComponent({
   flex-direction: column;
   justify-content: space-between;
 }
-.ptb-100 {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
+
 @media (max-width: 599.5px) {
   .about_us_card-center {
     i {

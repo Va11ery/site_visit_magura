@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh lpr lFf">
+  <q-layout view="lHh lpr lFf" class="bg-dark">
     <q-header>
       <q-toolbar class="toolbar justify-around bg-dark">
         <q-list dark>
@@ -61,38 +61,39 @@
       </q-page-scroller>
     </q-page-container>
 
-    <q-list
-      class="bg-dark"
-      style="padding-bottom: 100px; padding-top: 100px"
-      dark
-    >
-      <div class="container">
+    <div class="container text-white ptb-100">
+      <div
+        class="card-oswald q-pb-xl"
+        style="
+          font-size: 5vw;
+          line-height: 5vw;
+          font-weight: 700;
+          text-transform: uppercase;
+        "
+      >
+        Контактная информация
+      </div>
+      <div class="row q-col-gutter-xl q-pt-xl">
         <div
-          style="
-            font-size: 3vw;
-            line-height: 3vw;
-            font-weight: 700;
-            text-transform: uppercase;
-          "
+          class="col col-xs-12 col-sm-6 col-md-4 col-lg-3"
+          v-for="(i, index) in card_info"
+          :key="index"
         >
-          Контактная информация
-        </div>
-        <div class="row q-col-gutter-xl q-pt-xl">
-          <div
-            class="col col-xs-12 col-sm-6 col-md-4 col-lg-3"
-            v-for="(i, index) in card_info"
-            :key="index"
-          >
-            <q-card class="my-card bg-dark" dark flat>
-              <q-card-section class="text-orange">
-                <div class="text-h6" style="">{{ i.title }}</div>
-              </q-card-section>
-              <q-card-section>{{ i.text }}</q-card-section>
-            </q-card>
-          </div>
+          <q-card class="my-card bg-grey-10" dark flat>
+            <q-card-section class="text-orange">
+              <div class="text-h6" style="">{{ i.title }}</div>
+            </q-card-section>
+            <q-card-section>{{ i.text }}</q-card-section>
+          </q-card>
         </div>
       </div>
-    </q-list>
+    </div>
+
+    <div class="container">
+      <q-toolbar class="text-white">
+        <div>Copyright © 2022 Охранная организация Магура</div>
+      </q-toolbar>
+    </div>
   </q-layout>
 </template>
 
