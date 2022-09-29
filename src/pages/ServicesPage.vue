@@ -38,7 +38,7 @@
 import { defineComponent } from "vue";
 import cargo from "../assets/cargo.jpg";
 import objects from "../assets/objects.jpg";
-import personal from "../assets/cargo.jpg";
+import personal from "../assets/personal.png";
 export default defineComponent({
   name: "ServicesPage",
   data() {
