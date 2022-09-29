@@ -21,10 +21,34 @@
           indicator-color="transparent"
           active-color="yellow"
         >
-          <q-route-tab to="about" exact label="О компании" />
-          <q-route-tab to="/about" exact label="Новости" />
-          <q-route-tab to="/about" exact label="Контакты" />
-          <q-route-tab to="/about" exact label="Услуги" />
+          <q-route-tab to="/company" exact label="О компании" />
+          <q-route-tab to="/contacts" exact label="Контакты" />
+          <q-route-tab exact label="Услуги">
+            <q-menu transition-show="jump-down" transition-hide="jump-up">
+              <q-list>
+                <q-item clickable v-ripple to="/services/objects" exact>
+                  <q-item-section class="item-label"
+                    >Охрана объектов</q-item-section
+                  >
+                </q-item>
+                <q-item clickable to="/services/cargo" exact>
+                  <q-item-section class="item-label"
+                    >Сопровождение грузов</q-item-section
+                  >
+                </q-item>
+                <q-item clickable to="/services/personal" exact>
+                  <q-item-section class="item-label"
+                    >Личная охрана</q-item-section
+                  >
+                </q-item>
+                <q-item clickable to="/services/events" exact>
+                  <q-item-section class="item-label"
+                    >Охрана мероприятий</q-item-section
+                  >
+                </q-item>
+              </q-list>
+            </q-menu></q-route-tab
+          >
         </q-tabs>
 
         <q-btn
@@ -37,7 +61,7 @@
           <q-menu transition-show="jump-down" transition-hide="jump-up">
             <q-list style="min-width: 234.3px">
               <q-item clickable>
-                <q-item-section>Номер телефона</q-item-section>
+                <q-item-section @click="callTel()">Позвонить</q-item-section>
               </q-item>
               <q-item clickable>
                 <q-item-section>Адрес электронной почты</q-item-section>
@@ -83,7 +107,10 @@
             <q-card-section class="text-orange">
               <div class="text-h6" style="">{{ i.title }}</div>
             </q-card-section>
-            <q-card-section>{{ i.text }}</q-card-section>
+
+            <q-card-section style="font-size: 16px"
+              >{{ i.text }}
+            </q-card-section>
           </q-card>
         </div>
       </div>
@@ -106,28 +133,28 @@ export default defineComponent({
       card_info: [
         {
           title: "Номер телефона: ",
-          text: "3213111",
+          text: "+7 960 268-40-44",
           icon: {
             name: "",
           },
         },
         {
           title: "Электронная почта: ",
-          text: "3213111",
+          text: "В разработке",
           icon: {
             name: "",
           },
         },
         {
           title: "Время работы: ",
-          text: "3213111",
+          text: "Пн. - Пт.: с 9:00 до 18:00",
           icon: {
             name: "",
           },
         },
         {
           title: "Наш адрес: ",
-          text: "3213111",
+          text: "г. Санкт-Петербург, Большая Пороховская ул, дом № 61, литера Б, офис 1",
           icon: {
             name: "",
           },
@@ -138,6 +165,9 @@ export default defineComponent({
   setup() {
     return {
       tab: ref(""),
+      callTel() {
+        window.open("tel:89602684044", "_self");
+      },
     };
   },
 });
@@ -146,5 +176,13 @@ export default defineComponent({
 <style lang="scss" scoped>
 .toolbar {
   min-height: 120px;
+}
+.item-label {
+  font-weight: 500;
+  font-size: 16px;
+}
+.q-item.q-router-link--active,
+.q-item--active {
+  color: var(--q-positive);
 }
 </style>

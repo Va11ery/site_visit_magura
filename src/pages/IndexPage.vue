@@ -4,7 +4,7 @@
       <q-card class="card border-right bg-dark" flat bordered dark>
         <q-card-section class="q-pt-xl">
           <div class="text-overline text-teal" style="font-size: 35px">
-            100% ГАРАНТИЯ БЕЗОПАСНОСТИ!
+            ГАРАНТИЯ БЕЗОПАСНОСТИ!
           </div>
           <div class="card-oswald" style="font-size: 7vw; line-height: 7vw">
             ОБЕСПЕЧИМ
@@ -54,11 +54,6 @@
                 <div class="text-h6">{{ i.title }}</div>
               </q-card-section>
               <q-card-section>{{ i.text }}</q-card-section>
-              <q-card-actions align="right">
-                <q-btn flat round color="red" icon="favorite" />
-                <q-btn flat round color="teal" icon="bookmark" />
-                <q-btn flat round color="primary" icon="share" />
-              </q-card-actions>
             </q-card>
           </div>
         </div>
@@ -168,11 +163,6 @@
               <div class="text-h6" style="">{{ i.title }}</div>
             </q-card-section>
             <q-card-section>{{ i.text }}</q-card-section>
-            <q-card-actions align="right">
-              <q-btn flat round color="red" icon="favorite" />
-              <q-btn flat round color="teal" icon="bookmark" />
-              <q-btn flat round color="primary" icon="share" />
-            </q-card-actions>
           </q-card>
         </div>
       </div>

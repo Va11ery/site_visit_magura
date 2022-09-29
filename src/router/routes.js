@@ -5,8 +5,37 @@ const routes = [
     children: [
       { path: "", component: () => import("pages/IndexPage.vue") },
       {
-        path: "about",
-        component: () => import("pages/AboutPage.vue"),
+        path: "contacts",
+        component: () => import("src/pages/ContactsPage.vue"),
+      },
+      {
+        path: "company",
+        component: () => import("src/pages/CompaPage.vue"),
+      },
+      {
+        path: "services",
+        children: [
+          {
+            path: "objects",
+            component: () => import("src/pages/ServicesPage.vue"),
+            name: "objects",
+          },
+          {
+            path: "cargo",
+            component: () => import("src/pages/ServicesPage.vue"),
+            name: "cargo",
+          },
+          {
+            path: "personal",
+            component: () => import("src/pages/ServicesPage.vue"),
+            name: "personal",
+          },
+          {
+            path: "events",
+            component: () => import("src/pages/ServicesPage.vue"),
+            name: "events",
+          },
+        ],
       },
     ],
   },
