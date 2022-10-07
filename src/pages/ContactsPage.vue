@@ -37,7 +37,7 @@
         </q-item>
       </q-list>
 
-      <div class="ptb-100">
+      <!-- <div class="ptb-100">
         <div
           class="card-oswald text-dark"
           style="
@@ -66,7 +66,7 @@
             >
           </q-item-section>
         </q-item>
-      </q-list>
+      </q-list> -->
     </div>
   </q-page>
 </template>

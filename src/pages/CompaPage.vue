@@ -39,15 +39,46 @@
           Лицензии и сертификаты
         </div>
       </div>
-      <div>В разработке ...</div>
+      <div class="" style="padding-bottom: 100px">
+        <q-carousel
+          v-model="slide"
+          transition-prev="scale"
+          transition-next="scale"
+          swipeable
+          animated
+          control-color="white"
+          padding
+          arrows
+          height="700px"
+          class="bg-teal text-white shadow-1 rounded-borders"
+        >
+          <q-carousel-slide name="style" class="row flex-center">
+            <div class="col-4">
+              <q-img src="../assets/lis_1.png"></q-img>
+            </div>
+          </q-carousel-slide>
+          <q-carousel-slide name="tv" class="row flex-center">
+            <div class="col-4">
+              <q-img src="../assets/lis_2.png"></q-img>
+            </div>
+          </q-carousel-slide>
+        </q-carousel>
+      </div>
     </div>
   </q-page>
 </template>
 
 <script>
 import { defineComponent } from "vue";
+import lis_1 from "../assets/lis_1.png";
+import cargo from "../assets/cargo.jpg";
 export default defineComponent({
   name: "CompaPage",
+  data() {
+    return {
+      slide: "style",
+    };
+  },
 });
 </script>
 

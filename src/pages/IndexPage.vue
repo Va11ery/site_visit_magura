@@ -21,7 +21,12 @@
         </q-card-section>
 
         <q-card-actions class="q-pb-xl">
-          <q-btn outline color="secondary" style="width: 300px" size="lg"
+          <q-btn
+            outline
+            color="secondary"
+            style="width: 300px"
+            size="lg"
+            @click="callMail()"
             >Оставить заявку
           </q-btn>
         </q-card-actions>
@@ -175,6 +180,11 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "IndexPage",
+  methods: {
+    callMail() {
+      window.open("mailto:16lerochka@mail.ru", "_self");
+    },
+  },
   data() {
     return {
       about_us: [

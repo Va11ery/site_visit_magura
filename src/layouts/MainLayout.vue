@@ -63,7 +63,7 @@
               <q-item clickable>
                 <q-item-section @click="callTel()">Позвонить</q-item-section>
               </q-item>
-              <q-item clickable>
+              <q-item clickable @click="callMail()">
                 <q-item-section>Адрес электронной почты</q-item-section>
               </q-item>
               <q-separator />
@@ -167,6 +167,9 @@ export default defineComponent({
       tab: ref(""),
       callTel() {
         window.open("tel:89602684044", "_self");
+      },
+      callMail() {
+        window.open("mailto:16lerochka@mail.ru", "_self");
       },
     };
   },
