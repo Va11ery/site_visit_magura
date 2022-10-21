@@ -182,7 +182,7 @@ export default defineComponent({
   name: "IndexPage",
   methods: {
     callMail() {
-      window.open("mailto:16lerochka@mail.ru", "_self");
+      window.open("mailto:foton024@yandex.ru", "_self");
     },
   },
   data() {

@@ -169,7 +169,7 @@ export default defineComponent({
         window.open("tel:89602684044", "_self");
       },
       callMail() {
-        window.open("mailto:16lerochka@mail.ru", "_self");
+        window.open("mailto:foton024@yandex.ru", "_self");
       },
     };
   },

@@ -19,7 +19,7 @@
           <q-card-section class="col-5">
             <q-img class="rounded-borders" :src="getInfo.img" />
           </q-card-section>
-          <q-card-section class="col-8">
+          <q-card-section class="">
             <div class="item-caption text-dark" v-html="getInfo.text"></div>
           </q-card-section>
         </q-card-section>
@@ -87,7 +87,7 @@ export default defineComponent({
   },
   methods: {
     callMail() {
-      window.open("mailto:16lerochka@mail.ru", "_self");
+      window.open("mailto:foton024@yandex.ru", "_self");
     },
     // getImageUrl(name) {
     //   return new URL(`${name}`, import.meta.url).href ?? "";
