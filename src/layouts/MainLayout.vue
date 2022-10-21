@@ -140,7 +140,7 @@ export default defineComponent({
         },
         {
           title: "Электронная почта: ",
-          text: "В разработке",
+          text: "foton024@yandex.ru",
           icon: {
             name: "",
           },
