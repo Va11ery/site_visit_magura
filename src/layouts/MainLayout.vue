@@ -186,6 +186,6 @@ export default defineComponent({
 }
 .q-item.q-router-link--active,
 .q-item--active {
-  color: var(--q-positive);
+  color: var(--q-secondary);
 }
 </style>
