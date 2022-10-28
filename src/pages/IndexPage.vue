@@ -3,19 +3,28 @@
     <div class="container q-pt-xl q-pb-xl">
       <q-card class="card border-right bg-dark" flat bordered dark>
         <q-card-section class="q-pt-xl">
-          <div class="text-overline text-teal" style="font-size: 35px">
+          <div
+            class="text-overline text-teal card__title"
+            style="font-size: 3vw; line-height: 3vw"
+          >
             ГАРАНТИЯ БЕЗОПАСНОСТИ!
           </div>
-          <div class="card-oswald" style="font-size: 7vw; line-height: 7vw">
+          <div
+            class="card-oswald card__title"
+            style="font-size: 7vw; line-height: 7vw"
+          >
             ОБЕСПЕЧИМ
           </div>
           <div
-            class="card-oswald text-yellow"
+            class="card-oswald text-yellow card__title"
             style="font-size: 7vw; line-height: 7vw; opacity: 80%"
           >
             БЕЗОПАСНОСТЬ
           </div>
-          <div class="text-caption text-grey q-pt-xl" style="font-size: 16px">
+          <div
+            class="text-caption text-grey q-pt-xl card__title"
+            style="font-size: 16px"
+          >
             Услуги охранного предприятия для компаний и частных лиц
           </div>
         </q-card-section>
@@ -307,6 +316,24 @@ export default defineComponent({
     div {
       text-align: center;
     }
+  }
+}
+@media (max-width: 800px) {
+  .card__title {
+    font-size: 40px !important;
+    line-height: 40px !important;
+  }
+}
+@media (max-width: 506px) {
+  .card__title {
+    font-size: 30px !important;
+    line-height: 30px !important;
+  }
+}
+@media (max-width: 390px) {
+  .card__title {
+    font-size: 24px !important;
+    line-height: 24px !important;
   }
 }
 </style>

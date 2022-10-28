@@ -3,7 +3,7 @@
     <div class="container">
       <div class="ptb-100">
         <div
-          class="card-oswald text-dark"
+          class="card-oswald text-dark adaptive-title"
           style="
             font-size: 3vw;
             line-height: 3vw;
@@ -22,7 +22,7 @@
               >Санкт-Петербург</q-item-label
             >
             <q-item-label class="item-caption text-orange" caption>
-              +7 960 268-40-44</q-item-label
+              +7 812 224 24 96</q-item-label
             ></q-item-section
           >
         </q-item>
@@ -97,5 +97,11 @@ export default defineComponent({
 .item-caption {
   font-size: 26px;
   font-weight: 600;
+}
+@media (max-width: 1200px) {
+  .adaptive-title {
+    font-size: 45px !important;
+    line-height: 45px !important;
+  }
 }
 </style>

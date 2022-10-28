@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh lpr lFf" class="bg-dark">
     <q-header>
-      <q-toolbar class="toolbar justify-around bg-dark">
+      <q-toolbar class="toolbar justify-around bg-dark toolbar-adaptive">
         <q-list dark>
           <q-item clickable v-ripple @click="$router.push('/')">
             <q-item-section>
@@ -20,6 +20,7 @@
           shrink
           indicator-color="transparent"
           active-color="yellow"
+          class="adaptive-header"
         >
           <q-route-tab to="/company" exact label="О компании" />
           <q-route-tab to="/contacts" exact label="Контакты" />
@@ -55,7 +56,7 @@
           color="orange"
           label="Свзязь с нами"
           flat
-          class="text_label_btn"
+          class="text_label_btn adaptive-header"
           icon="mail"
         >
           <q-menu transition-show="jump-down" transition-hide="jump-up">
@@ -70,6 +71,81 @@
             </q-list>
           </q-menu>
         </q-btn>
+
+        <q-btn
+          flat
+          round
+          dense
+          icon="menu"
+          class="btn-adaptive"
+          @click="activate('right')"
+          style="display: none"
+        />
+        <n-drawer v-model:show="active" :placement="placement">
+          <n-drawer-content closable title="Магура" style="padding: 0px">
+            <q-list class="text-dark">
+              <q-item
+                clickable
+                v-ripple
+                to="/company"
+                exact
+                active-class="my-menu-link"
+              >
+                <q-item-section>О компании</q-item-section>
+              </q-item>
+
+              <q-item
+                clickable
+                v-ripple
+                to="/contacts"
+                exact
+                active-class="my-menu-link"
+              >
+                <q-item-section>Контакты</q-item-section>
+              </q-item>
+              <q-separator spaced />
+              <q-item
+                clickable
+                v-ripple
+                to="/services/objects"
+                exact
+                active-class="my-menu-link"
+              >
+                <q-item-section>Охрана объекта</q-item-section>
+              </q-item>
+
+              <q-item
+                clickable
+                v-ripple
+                to="/services/cargo"
+                exact
+                active-class="my-menu-link"
+              >
+                <q-item-section>Сопровождение груза</q-item-section>
+              </q-item>
+
+              <q-item
+                clickable
+                v-ripple
+                to="/services/personal"
+                exact
+                active-class="my-menu-link"
+              >
+                <q-item-section>Личная охрана</q-item-section>
+              </q-item>
+
+              <q-item
+                clickable
+                v-ripple
+                to="/services/events"
+                exact
+                active-class="my-menu-link"
+              >
+                <q-item-section>Охрана мероприятий</q-item-section>
+              </q-item>
+            </q-list>
+          </n-drawer-content>
+        </n-drawer>
       </q-toolbar>
     </q-header>
 
@@ -126,14 +202,19 @@
 
 <script>
 import { defineComponent, ref } from "vue";
+import { NDrawer, NDrawerContent } from "naive-ui";
 export default defineComponent({
   name: "MainLayout",
+  components: {
+    NDrawer,
+    NDrawerContent,
+  },
   data() {
     return {
       card_info: [
         {
           title: "Номер телефона: ",
-          text: "+7 960 268-40-44",
+          text: "+7 (812) 224 24 96",
           icon: {
             name: "",
           },
@@ -163,14 +244,23 @@ export default defineComponent({
     };
   },
   setup() {
+    const active = ref(false);
+    const placement = ref("right");
+    const activate = (place) => {
+      active.value = true;
+      placement.value = place;
+    };
     return {
       tab: ref(""),
       callTel() {
-        window.open("tel:89602684044", "_self");
+        window.open("tel:8 812 224 24 96", "_self");
       },
       callMail() {
         window.open("mailto:foton024@yandex.ru", "_self");
       },
+      active,
+      placement,
+      activate,
     };
   },
 });
@@ -187,5 +277,16 @@ export default defineComponent({
 .q-item.q-router-link--active,
 .q-item--active {
   color: var(--q-secondary);
+}
+@media (max-width: 925px) {
+  .adaptive-header {
+    display: none;
+  }
+  .btn-adaptive {
+    display: block !important;
+  }
+  .toolbar-adaptive {
+    justify-content: space-between !important;
+  }
 }
 </style>

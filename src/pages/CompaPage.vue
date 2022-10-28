@@ -3,7 +3,7 @@
     <div class="container">
       <div class="ptb-100">
         <div
-          class="card-oswald text-dark"
+          class="card-oswald text-dark adaptive-title"
           style="
             font-size: 3vw;
             line-height: 3vw;
@@ -18,7 +18,7 @@
       <q-list padding class="rounded-borders">
         <q-item class="q-pb-xl">
           <q-item-section>
-            <q-item-label class="item-caption text-teal" caption>
+            <q-item-label class="item-caption text-teal adaptive-text" caption>
               &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Компания
               «Магура» приветствует Вас на сайте нашей компании!<br />
               Наша команда опытных сотрудников, которая обеспечит надежную
@@ -35,7 +35,7 @@
 
       <div class="ptb-100">
         <div
-          class="card-oswald text-dark"
+          class="card-oswald text-dark adaptive-title"
           style="
             font-size: 3vw;
             line-height: 3vw;
@@ -46,8 +46,16 @@
           Лицензии и сертификаты
         </div>
       </div>
-      <div class="" style="padding-bottom: 100px">
-        <q-carousel
+      <div style="padding-bottom: 100px">
+        <div class="bg-teal q-pa-xl flex-center row">
+          <n-image-group :theme-overrides="imageGroupThemeOverrides">
+            <n-space>
+              <n-image width="250" :src="lis_1" />
+              <n-image width="250" :src="lis_2" />
+            </n-space>
+          </n-image-group>
+        </div>
+        <!-- <q-carousel
           v-model="slide"
           transition-prev="scale"
           transition-next="scale"
@@ -69,7 +77,7 @@
               <q-img src="../assets/lis_2.png"></q-img>
             </div>
           </q-carousel-slide>
-        </q-carousel>
+        </q-carousel> -->
       </div>
     </div>
   </q-page>
@@ -77,8 +85,7 @@
 
 <script>
 import { defineComponent } from "vue";
-import lis_1 from "../assets/lis_1.png";
-import cargo from "../assets/cargo.jpg";
+import { NImageGroup, NImage, useThemeVars, NSpace } from "naive-ui";
 export default defineComponent({
   name: "CompaPage",
   data() {
@@ -86,6 +93,33 @@ export default defineComponent({
       slide: "style",
     };
   },
+  components: {
+    NImageGroup,
+    NImage,
+    NSpace,
+  },
+  computed: {
+    imageGroupThemeOverrides() {
+      const { popoverColor, boxShadow2, textColor2, borderRadius } =
+        useThemeVars().value;
+      const themeOverrides = {
+        toolbarColor: popoverColor,
+        toolbarBoxShadow: boxShadow2,
+        toolbarIconColor: textColor2,
+        toolbarBorderRadius: borderRadius,
+      };
+      return themeOverrides;
+    },
+  },
+  setup() {
+    const lis_1 = new URL("../assets/lis_1.png", import.meta.url).href;
+    const lis_2 = new URL("../assets/lis_2.png", import.meta.url).href;
+    return {
+      lis_1,
+      lis_2,
+    };
+  },
+  method: {},
 });
 </script>
 
@@ -97,5 +131,18 @@ export default defineComponent({
 .item-caption {
   font-size: 1.5vw;
   font-weight: 500;
+}
+@media (max-width: 1200px) {
+  .adaptive-title {
+    font-size: 45px !important;
+    line-height: 45px !important;
+  }
+  .adaptive-text {
+    font-size: 25px !important;
+    line-height: 25px !important;
+  }
+  .adaptive-img {
+    width: 200px !important;
+  }
 }
 </style>

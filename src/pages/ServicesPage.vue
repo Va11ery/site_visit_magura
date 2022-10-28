@@ -3,7 +3,7 @@
     <div class="container">
       <div class="ptb-100">
         <div
-          class="card-oswald text-dark text-center"
+          class="card-oswald text-dark text-center adaptive-title"
           style="
             font-size: 3vw;
             line-height: 3vw;
@@ -15,11 +15,11 @@
         </div>
       </div>
       <q-card class="my-card" flat>
-        <q-card-section horizontal>
-          <q-card-section class="col-5">
+        <q-card-section class="row q-col-gutter-xl q-pt-xl">
+          <q-card-section class="col col-xs-12 col-sm-6 col-md-6 col-lg-6">
             <q-img class="rounded-borders" :src="getInfo.img" />
           </q-card-section>
-          <q-card-section class="">
+          <q-card-section class="col col-xs-12 col-sm-6 col-md-6 col-lg-6">
             <div class="item-caption text-dark" v-html="getInfo.text"></div>
           </q-card-section>
         </q-card-section>
@@ -100,5 +100,11 @@ export default defineComponent({
 .item-caption {
   font-size: 18px;
   font-weight: 500;
+}
+@media (max-width: 925px) {
+  .adaptive-title {
+    font-size: 45px !important;
+    line-height: 45px !important;
+  }
 }
 </style>
