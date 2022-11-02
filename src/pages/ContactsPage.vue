@@ -22,8 +22,8 @@
               >Санкт-Петербург</q-item-label
             >
             <q-item-label class="item-caption text-orange" caption>
-              +7 812 224 24 96</q-item-label
-            ></q-item-section
+              +
+            </q-item-label></q-item-section
           >
         </q-item>
         <q-item class="q-pb-xl">

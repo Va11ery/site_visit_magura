@@ -194,7 +194,7 @@
 
     <div class="container">
       <q-toolbar class="text-white">
-        <div>Copyright © 2022 Охранная организация Магура</div>
+        <div>© 2022 Охранная организация Магура</div>
       </q-toolbar>
     </div>
   </q-layout>
