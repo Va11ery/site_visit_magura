@@ -4,12 +4,6 @@
       <q-card class="card border-right bg-dark" flat bordered dark>
         <q-card-section class="q-pt-xl">
           <div
-            class="text-overline text-teal card__title"
-            style="font-size: 3vw; line-height: 3vw"
-          >
-            ГАРАНТИЯ БЕЗОПАСНОСТИ!
-          </div>
-          <div
             class="card-oswald card__title"
             style="font-size: 7vw; line-height: 7vw"
           >
@@ -25,7 +19,7 @@
             class="text-caption text-grey q-pt-xl card__title"
             style="font-size: 16px"
           >
-            Услуги охранного предприятия для компаний и частных лиц
+            Услуги охранного предприятия для частных лиц и компаний
           </div>
         </q-card-section>
 

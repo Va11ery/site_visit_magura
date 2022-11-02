@@ -1,8 +1,8 @@
 {
   "name": "site_visit",
   "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "Quasar App",
+  "description": "Охранная организация",
+  "productName": "Магура",
   "author": "Valery",
   "private": true,
   "scripts": {

@@ -6,7 +6,7 @@
           <q-item clickable v-ripple @click="$router.push('/')">
             <q-item-section>
               <q-avatar class="q-mr-sm" size="6rem">
-                <img src="~/assets/logo.png" /> </q-avatar
+                <img src="~/assets/magura_logo.png" /> </q-avatar
             ></q-item-section>
             <q-item-section>
               <q-item-label style="font-size: 1.5rem">Магура</q-item-label>
