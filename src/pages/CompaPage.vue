@@ -18,23 +18,28 @@
       <q-list padding class="rounded-borders">
         <q-item class="q-pb-xl">
           <q-item-section>
-            <q-item-label class="item-caption text-teal adaptive-text" caption>
-              &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Компания
-              «Магура» приветствует Вас на сайте нашей компании! Мы осуществляем
-              охранную деятельность с 2015 года.<br />
-              Наша команда опытных сотрудников, которая обеспечит надежную
-              охрану вашей жизни, а также возьмет на себя ответственность за
-              сохранение собственности, грузов, объектов, офисов, мероприятий и
-              др.<br />
-              <br />&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Команда
-              Магура применяет индивидуальный подход к каждому клиенту и
-              действует на основании законодательства РФ.
+            <q-item-label
+              class="item-caption text-teal adaptive-text text-justify"
+              caption
+            >
+              <span style="padding-left: 70px"></span>
+              «Магура» приветствует вас на сайте нашей компании! Мы осуществляем
+              охранную деятельность с 2015 года. Наша команда опытных
+              сотрудников, которая обеспечит надежную охрану вашей жизни, а
+              также возьмет на себя ответственность за сохранение собственности,
+              грузов, объектов, офисов, мероприятий и др.
+
+              <div class="q-mt-xl">
+                <span style="padding-left: 70px"></span>
+                Команда «Магура» применяет индивидуальный подход к каждому
+                клиенту и действует на основании законодательства РФ.
+              </div>
             </q-item-label></q-item-section
           >
         </q-item>
       </q-list>
 
-      <div class="ptb-100">
+      <div class="ptb-100" style="padding-top: 52px">
         <div
           class="card-oswald text-dark adaptive-title"
           style="
@@ -48,11 +53,11 @@
         </div>
       </div>
       <div style="padding-bottom: 100px">
-        <div class="bg-teal q-pa-xl flex-center row">
+        <div class="q-pa-xl bg-teal">
           <n-image-group :theme-overrides="imageGroupThemeOverrides">
-            <n-space>
-              <n-image width="250" :src="lis_1" />
-              <n-image width="250" :src="lis_2" />
+            <n-space justify="space-around">
+              <n-image width="500" :src="lis_1" />
+              <n-image width="500" :src="lis_2" />
             </n-space>
           </n-image-group>
         </div>
