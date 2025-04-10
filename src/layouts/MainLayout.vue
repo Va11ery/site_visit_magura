@@ -12,8 +12,8 @@
               </q-avatar>
             </q-item-section>
             <q-item-section avatar>
-              <q-avatar class="q-mr-sm" size="9rem">
-                <q-img src="~/assets/sokol_new.png" height="92" />
+              <q-avatar class="q-mr-sm" size="6rem">
+                <img src="~/assets/sk.jpg" />
                 <q-tooltip> ООО ОО "Сокол" </q-tooltip>
               </q-avatar>
             </q-item-section>
@@ -36,7 +36,7 @@
           v-model="tab"
           shrink
           indicator-color="transparent"
-          active-color="yellow"
+          active-color="blue"
           class="adaptive-header"
         >
           <q-route-tab to="/company" exact label="О компании" />
@@ -70,7 +70,7 @@
         </q-tabs>
 
         <q-btn
-          color="orange"
+          color="red"
           label="Свзязь с нами"
           flat
           class="text_label_btn adaptive-header"
@@ -174,7 +174,7 @@
         :scroll-offset="150"
         :offset="[18, 18]"
       >
-        <q-btn fab icon="keyboard_arrow_up" color="accent" />
+        <q-btn fab icon="keyboard_arrow_up" color="red" />
       </q-page-scroller>
     </q-page-container>
 
@@ -197,7 +197,7 @@
           :key="index"
         >
           <q-card class="my-card bg-grey-10" dark flat>
-            <q-card-section class="text-orange">
+            <q-card-section class="text-blue">
               <div class="text-h6" style="">{{ i.title }}</div>
             </q-card-section>
 
@@ -211,7 +211,7 @@
 
     <div class="container">
       <q-toolbar class="text-white">
-        <div>© 2022 Группа охранных организаций</div>
+        <div>© 2025 Группа охранных организаций КГБ</div>
       </q-toolbar>
     </div>
   </q-layout>
@@ -238,7 +238,7 @@ export default defineComponent({
         },
         {
           title: "Электронная почта: ",
-          text: "foton024@yandex.ru",
+          text: "op.kgb@mail.ru",
           icon: {
             name: "",
           },
@@ -252,7 +252,7 @@ export default defineComponent({
         },
         {
           title: "Наш адрес: ",
-          text: "г. Санкт-Петербург, Большая Пороховская ул, дом № 61, литера Б, офис 1",
+          text: "г. Санкт-Петербург, Большая Пороховская ул, дом 61",
           icon: {
             name: "",
           },
@@ -273,7 +273,7 @@ export default defineComponent({
         window.open("tel:8 812 224 24 96", "_self");
       },
       callMail() {
-        window.open("mailto:foton024@yandex.ru", "_self");
+        window.open("mailto:op.kgb@mail.ru", "_self");
       },
       active,
       placement,
@@ -293,7 +293,7 @@ export default defineComponent({
 }
 .q-item.q-router-link--active,
 .q-item--active {
-  color: var(--q-secondary);
+  color: #2196f3;
 }
 @media (max-width: 925px) {
   .adaptive-header {

@@ -19,11 +19,11 @@
         <q-item class="q-pb-xl">
           <q-item-section>
             <q-item-label
-              class="item-caption text-teal adaptive-text text-justify"
+              class="item-caption text-blue adaptive-text text-justify"
               caption
             >
               <span style="padding-left: 70px"></span>
-              «Магура» приветствует вас на сайте нашей компании! Мы осуществляем
+              ООО Кгб приветствует вас на сайте нашей компании! Мы осуществляем
               охранную деятельность с 2015 года. Наша команда опытных
               сотрудников, которая обеспечит надежную охрану вашей жизни, а
               также возьмет на себя ответственность за сохранение собственности,
@@ -31,8 +31,8 @@
 
               <div class="q-mt-xl">
                 <span style="padding-left: 70px"></span>
-                Команда «Магура» применяет индивидуальный подход к каждому
-                клиенту и действует на основании законодательства РФ.
+                Команда Кгб применяет индивидуальный подход к каждому клиенту и
+                действует на основании законодательства РФ.
               </div>
             </q-item-label></q-item-section
           >
@@ -53,7 +53,7 @@
         </div>
       </div>
       <div style="padding-bottom: 100px">
-        <div class="q-pa-xl bg-teal">
+        <div class="q-pa-xl bg-blue">
           <n-image-group :theme-overrides="imageGroupThemeOverrides">
             <n-space justify="space-around">
               <n-image width="500" :src="lis_1" />
@@ -61,29 +61,74 @@
             </n-space>
           </n-image-group>
         </div>
-        <!-- <q-carousel
-          v-model="slide"
-          transition-prev="scale"
-          transition-next="scale"
-          swipeable
-          animated
-          control-color="white"
-          padding
-          arrows
-          height="700px"
-          class="bg-teal text-white shadow-1 rounded-borders"
+      </div>
+
+      <div class="ptb-100" style="padding-top: 52px">
+        <div
+          class="card-oswald text-dark adaptive-title"
+          style="
+            font-size: 3vw;
+            line-height: 3vw;
+            font-weight: 700;
+            text-transform: uppercase;
+          "
         >
-          <q-carousel-slide name="style" class="row flex-center">
-            <div class="col-4">
-              <q-img src="../assets/lis_1.png"></q-img>
-            </div>
-          </q-carousel-slide>
-          <q-carousel-slide name="tv" class="row flex-center">
-            <div class="col-4">
-              <q-img src="../assets/lis_2.png"></q-img>
-            </div>
-          </q-carousel-slide>
-        </q-carousel> -->
+          Отчет охраны труда КГБ
+        </div>
+      </div>
+      <div style="padding-bottom: 100px">
+        <div class="q-pa-xl bg-blue">
+          <n-image-group>
+            <n-carousel
+              :slides-per-view="3"
+              :space-between="50"
+              :loop="false"
+              draggable
+            >
+              <n-image
+                v-for="i in 5"
+                :key="i"
+                height="300"
+                object-fit="cover"
+                :src="sout_kbg(i)"
+              />
+            </n-carousel>
+          </n-image-group>
+        </div>
+      </div>
+
+      <div class="ptb-100" style="padding-top: 52px">
+        <div
+          class="card-oswald text-dark adaptive-title"
+          style="
+            font-size: 3vw;
+            line-height: 3vw;
+            font-weight: 700;
+            text-transform: uppercase;
+          "
+        >
+          Отчет охраны труда Сокол
+        </div>
+      </div>
+      <div style="padding-bottom: 100px">
+        <div class="q-pa-xl bg-blue">
+          <n-image-group>
+            <n-carousel
+              :slides-per-view="3"
+              :space-between="50"
+              :loop="false"
+              draggable
+            >
+              <n-image
+                v-for="i in 6"
+                :key="i"
+                height="300"
+                object-fit="cover"
+                :src="sokol(i)"
+              />
+            </n-carousel>
+          </n-image-group>
+        </div>
       </div>
     </div>
   </q-page>
@@ -91,7 +136,7 @@
 
 <script>
 import { defineComponent } from "vue";
-import { NImageGroup, NImage, useThemeVars, NSpace } from "naive-ui";
+import { NImageGroup, NImage, useThemeVars, NSpace, NCarousel } from "naive-ui";
 export default defineComponent({
   name: "CompaPage",
   data() {
@@ -103,6 +148,7 @@ export default defineComponent({
     NImageGroup,
     NImage,
     NSpace,
+    NCarousel,
   },
   computed: {
     imageGroupThemeOverrides() {
@@ -120,9 +166,20 @@ export default defineComponent({
   setup() {
     const lis_1 = new URL("../assets/lis_1.png", import.meta.url).href;
     const lis_2 = new URL("../assets/lis_2.png", import.meta.url).href;
+
+    const sout_kbg = (i) => {
+      return new URL(`../assets/sout_kgb/sout_${i}.jpg`, import.meta.url).href;
+    };
+
+    const sokol = (i) => {
+      return new URL(`../assets/sout_sokol/${i}.jpg`, import.meta.url).href;
+    };
+
     return {
       lis_1,
       lis_2,
+      sout_kbg,
+      sokol,
     };
   },
   method: {},

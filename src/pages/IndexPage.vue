@@ -10,7 +10,7 @@
             ОБЕСПЕЧИМ
           </div>
           <div
-            class="card-oswald text-yellow card__title"
+            class="card-oswald text-blue-13 card__title"
             style="font-size: 7vw; line-height: 7vw; opacity: 80%"
           >
             БЕЗОПАСНОСТЬ
@@ -26,7 +26,7 @@
         <q-card-actions class="q-pb-xl">
           <q-btn
             outline
-            color="secondary"
+            color="red"
             style="width: 300px"
             size="lg"
             @click="callMail()"
@@ -264,7 +264,7 @@ export default defineComponent({
   name: "IndexPage",
   methods: {
     callMail() {
-      window.open("mailto:foton024@yandex.ru", "_self");
+      window.open("mailto:op.kgb@mail.ru", "_self");
     },
   },
   components: {
@@ -281,7 +281,7 @@ export default defineComponent({
           text: "ШТАТ КВАЛИФИЦИРОВАННЫХ СОТРУДНИКОВ",
           icon: {
             name: "gpp_good",
-            color: "warning",
+            color: "blue",
           },
         },
         {
@@ -289,7 +289,7 @@ export default defineComponent({
           text: "КОМПАНИЙ НА ОБСЛУЖИВАНИИ",
           icon: {
             name: "business",
-            color: "warning",
+            color: "blue",
           },
         },
       ],
@@ -299,7 +299,7 @@ export default defineComponent({
           text: "Охрана недвижимости, строительных объектов, промышленных объектов",
           icon: {
             name: "groups",
-            color: "secondary",
+            color: "blue",
           },
         },
         {
@@ -307,7 +307,7 @@ export default defineComponent({
           text: "Ж/д способом, автомобилем, самолетом, сопровождение фур",
           icon: {
             name: "safety_check",
-            color: "blue-grey-10",
+            color: "red",
           },
         },
         {
@@ -323,7 +323,7 @@ export default defineComponent({
           text: "Внешняя охрана, внутренняя охрана, комплексная охрана",
           icon: {
             name: "groups",
-            color: "secondary",
+            color: "blue",
           },
         },
         {
@@ -331,7 +331,7 @@ export default defineComponent({
           text: "Охрана объекта на сутки, охрана объекта на день: на ночь",
           icon: {
             name: "safety_check",
-            color: "blue-grey-10",
+            color: "red",
           },
         },
         {
@@ -349,7 +349,7 @@ export default defineComponent({
           text: "Каждый сотрудник ЧОО имеет большой опыт работы в охране и проходит ежегодное обучение",
           icon: {
             name: "groups",
-            color: "secondary",
+            color: "blue",
           },
         },
         {
@@ -357,7 +357,7 @@ export default defineComponent({
           text: "Наши менеджеры составят для вас КП и оценят ваш объект в день обращения.",
           icon: {
             name: "safety_check",
-            color: "blue-grey-10",
+            color: "red",
           },
         },
         {
@@ -394,8 +394,9 @@ export default defineComponent({
 }
 
 .border-right {
+  border: 5px solid #2979ff;
+
   border-right: 0px solid !important;
-  border: 5px solid #b3a106;
 
   border-left: 0px solid !important;
 }

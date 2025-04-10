@@ -21,7 +21,7 @@
             <q-item-label class="item-label q-pb-sm"
               >Санкт-Петербург</q-item-label
             >
-            <q-item-label class="item-caption text-orange" caption>
+            <q-item-label class="item-caption text-red" caption>
               +7 812 224 24 96
             </q-item-label></q-item-section
           >
@@ -29,17 +29,16 @@
         <q-item class="q-pb-xl">
           <q-item-section>
             <q-item-label class="item-label q-pb-sm">Адрес</q-item-label>
-            <q-item-label class="item-caption text-orange" caption>
-              г. Санкт-Петербург, Большая Пороховская ул, дом № 61, литера Б,
-              офис 1</q-item-label
+            <q-item-label class="item-caption text-red" caption>
+              г. Санкт-Петербург, Большая Пороховская ул, дом 61</q-item-label
             ></q-item-section
           >
         </q-item>
         <q-item>
           <q-item-section>
             <q-item-label class="item-label q-pb-sm">Почта</q-item-label>
-            <q-item-label class="item-caption text-orange" caption>
-              foton024@yandex.ru
+            <q-item-label class="item-caption text-red" caption>
+              op.kgb@mail.ru
             </q-item-label></q-item-section
           >
         </q-item>
