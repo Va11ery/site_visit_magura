@@ -65,6 +65,45 @@
             </q-card>
           </div>
         </div>
+
+        <div
+          class="card-oswald q-pt-xl q-pb-xl"
+          style="font-size: 5vw; line-height: 6vw; font-weight: 700"
+        >
+          Они выбирают нас
+        </div>
+
+        <div class="q-pb-xl">
+          <swiper
+            :slides-per-view="4"
+            :loop="true"
+            :space-between="70"
+            :grabCursor="true"
+            :modules="modules"
+            :breakpoints="{
+              '100': {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              '640': {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              '900': {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+              '1024': {
+                slidesPerView: 5,
+                spaceBetween: 50,
+              },
+            }"
+          >
+            <swiper-slide v-for="(item, index) in swiper_items" :key="index">
+              <q-img fit="contain" style="height: 100px" :src="item"></q-img>
+            </swiper-slide>
+          </swiper>
+        </div>
       </div>
     </div>
     <!-- /////////////////////////////////////////////////////////////////////-->
@@ -175,11 +214,51 @@
         </div>
       </div>
     </div>
+
+    <!-- <div class="bg-white ptb-100">
+      <div class="container">
+        <div
+          class="card-oswald q-pb-xl"
+          style="font-size: 6vw; line-height: 6vw; font-weight: 700"
+        >
+          ОНИ ВЫБИРАЮТ НАС
+        </div>
+        <div
+          class="row q-col-gutter-xl q-pt-xl"
+          style="font-size: 20px; font-weight: 500"
+        >
+          <div class="col col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            Команда опытных сотрудников, которая обеспечит надежную охрану вашей
+            жизни, а также возьмет на себя ответственность за сохранение
+            собственности, грузов, объектов, офисов, мероприятий и др. Также
+            применяет индивидуальный подход к каждому клиенту и действует на
+            основании законодательства РФ.
+          </div>
+          <div class="col col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            Сотрудники офиса постоянно повышают свою квалификацию для
+            стратегического развития охранной организации. Наши охранники
+            повышают свою квалификацию доказывая уровень своих знаний и умений
+            для оказания качественных охранных услуг.
+          </div>
+        </div>
+      </div>
+    </div> -->
   </q-page>
 </template>
 
 <script>
 import { defineComponent } from "vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import delko from "../assets/delko.png";
+
+import karat from "../assets/karat.png";
+import mechet from "../assets/mechet.png";
+import client from "../assets/client.png";
+import piter from "../assets/piter.svg";
+import monopoly from "../assets/monopoly.svg";
+// Import Swiper styles
+import "swiper/css";
 
 export default defineComponent({
   name: "IndexPage",
@@ -188,8 +267,14 @@ export default defineComponent({
       window.open("mailto:foton024@yandex.ru", "_self");
     },
   },
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
   data() {
     return {
+      modules: [Autoplay, Pagination, Navigation],
+      swiper_items: [delko, karat, piter, mechet, monopoly, client],
       about_us: [
         {
           title: "200",
@@ -290,9 +375,28 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .border-right {
   border-right: 0px solid !important;
   border: 5px solid #b3a106;
+
   border-left: 0px solid !important;
 }
 .my-card {
