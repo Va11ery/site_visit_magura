@@ -277,7 +277,7 @@ export default defineComponent({
       swiper_items: [delko, karat, piter, mechet, monopoly, client],
       about_us: [
         {
-          title: "200",
+          title: "100+",
           text: "ШТАТ КВАЛИФИЦИРОВАННЫХ СОТРУДНИКОВ",
           icon: {
             name: "gpp_good",
@@ -285,7 +285,7 @@ export default defineComponent({
           },
         },
         {
-          title: "100",
+          title: "50",
           text: "КОМПАНИЙ НА ОБСЛУЖИВАНИИ",
           icon: {
             name: "business",

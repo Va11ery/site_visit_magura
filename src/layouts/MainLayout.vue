@@ -4,12 +4,29 @@
       <q-toolbar class="toolbar justify-around bg-dark toolbar-adaptive">
         <q-list dark>
           <q-item clickable v-ripple @click="$router.push('/')">
-            <q-item-section>
+            <q-item-section avatar>
               <q-avatar class="q-mr-sm" size="6rem">
-                <img src="~/assets/magura_logo.png" /> </q-avatar
-            ></q-item-section>
+                <img src="~/assets/kgb.png" />
+
+                <q-tooltip> ООО "ОО "КГБ"</q-tooltip>
+              </q-avatar>
+            </q-item-section>
+            <q-item-section avatar>
+              <q-avatar class="q-mr-sm" size="9rem">
+                <q-img src="~/assets/sokol_new.png" height="92" />
+                <q-tooltip> ООО ОО "Сокол" </q-tooltip>
+              </q-avatar>
+            </q-item-section>
+            <q-item-section avatar>
+              <q-avatar class="q-mr-sm" size="6rem">
+                <img src="~/assets/chop.jpg" />
+                <q-tooltip> ООО "ЧОП "Гвардия" </q-tooltip>
+              </q-avatar>
+            </q-item-section>
             <q-item-section>
-              <q-item-label style="font-size: 1.5rem">Магура</q-item-label>
+              <q-item-label style="font-size: 1.5rem">
+                Группа охранных предприятий</q-item-label
+              >
               <q-item-label caption>Услуги охраны</q-item-label></q-item-section
             >
           </q-item>
@@ -82,7 +99,7 @@
           style="display: none"
         />
         <n-drawer v-model:show="active" :placement="placement">
-          <n-drawer-content closable title="Магура" style="padding: 0px">
+          <n-drawer-content closable title="ООО Кгб" style="padding: 0px">
             <q-list class="text-dark">
               <q-item
                 clickable
@@ -194,7 +211,7 @@
 
     <div class="container">
       <q-toolbar class="text-white">
-        <div>© 2022 Охранная организация Магура</div>
+        <div>© 2022 Группа охранных организаций</div>
       </q-toolbar>
     </div>
   </q-layout>
