@@ -23,15 +23,15 @@
               caption
             >
               <span style="padding-left: 70px"></span>
-              ООО Кгб приветствует вас на сайте нашей компании! Мы осуществляем
-              охранную деятельность с 2015 года. Наша команда опытных
-              сотрудников, которая обеспечит надежную охрану вашей жизни, а
-              также возьмет на себя ответственность за сохранение собственности,
-              грузов, объектов, офисов, мероприятий и др.
+              Группа охранных предприятий приветствует вас на сайте нашей
+              компании! Мы осуществляем охранную деятельность с 2015 года. Наша
+              команда опытных сотрудников, которая обеспечит надежную охрану
+              вашей жизни, а также возьмет на себя ответственность за сохранение
+              собственности, грузов, объектов, офисов, мероприятий и др.
 
               <div class="q-mt-xl">
                 <span style="padding-left: 70px"></span>
-                Команда Кгб применяет индивидуальный подход к каждому клиенту и
+                Команда применяет индивидуальный подход к каждому клиенту и
                 действует на основании законодательства РФ.
               </div>
             </q-item-label></q-item-section
@@ -130,6 +130,41 @@
           </n-image-group>
         </div>
       </div>
+
+      <div class="ptb-100" style="padding-top: 52px">
+        <div
+          class="card-oswald text-dark adaptive-title"
+          style="
+            font-size: 3vw;
+            line-height: 3vw;
+            font-weight: 700;
+            text-transform: uppercase;
+          "
+        >
+          Отчет охраны труда Гвардия
+        </div>
+      </div>
+
+      <div style="padding-bottom: 100px">
+        <div class="q-pa-xl bg-blue">
+          <n-image-group>
+            <n-carousel
+              :slides-per-view="3"
+              :space-between="50"
+              :loop="false"
+              draggable
+            >
+              <n-image
+                v-for="i in 4"
+                :key="i"
+                height="300"
+                object-fit="cover"
+                :src="gvardia(i)"
+              />
+            </n-carousel>
+          </n-image-group>
+        </div>
+      </div>
     </div>
   </q-page>
 </template>
@@ -175,11 +210,17 @@ export default defineComponent({
       return new URL(`../assets/sout_sokol/${i}.jpg`, import.meta.url).href;
     };
 
+    const gvardia = (i) => {
+      return new URL(`../assets/gvardia/gvardia_${i}.png`, import.meta.url)
+        .href;
+    };
+
     return {
       lis_1,
       lis_2,
       sout_kbg,
       sokol,
+      gvardia,
     };
   },
   method: {},

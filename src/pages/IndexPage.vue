@@ -68,41 +68,26 @@
 
         <div
           class="card-oswald q-pt-xl q-pb-xl"
-          style="font-size: 5vw; line-height: 6vw; font-weight: 700"
+          style="font-size: 6vw; line-height: 6vw; font-weight: 700"
         >
-          Они выбирают нас
+          ПАРТНЕРЫ
         </div>
 
         <div class="q-pb-xl">
-          <swiper
-            :slides-per-view="4"
-            :loop="true"
-            :space-between="70"
-            :grabCursor="true"
-            :modules="modules"
-            :breakpoints="{
-              '100': {
-                slidesPerView: 1,
-                spaceBetween: 20,
-              },
-              '640': {
-                slidesPerView: 2,
-                spaceBetween: 20,
-              },
-              '900': {
-                slidesPerView: 3,
-                spaceBetween: 40,
-              },
-              '1024': {
-                slidesPerView: 5,
-                spaceBetween: 50,
-              },
-            }"
-          >
-            <swiper-slide v-for="(item, index) in swiper_items" :key="index">
-              <q-img fit="contain" style="height: 100px" :src="item"></q-img>
-            </swiper-slide>
-          </swiper>
+          <div class="grid">
+            <div
+              class="grid-item"
+              v-for="(item, index) in swiper_items"
+              :key="index"
+            >
+              <q-img fit="contain" style="height: 150px" :src="item.img">
+              </q-img>
+
+              <div class="grid-item-text text-center text-subtitle1">
+                {{ item.text }}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -255,6 +240,7 @@ import delko from "../assets/delko.png";
 import karat from "../assets/karat.png";
 import mechet from "../assets/mechet.png";
 import client from "../assets/client.png";
+import tornado from "../assets/tornado.png";
 import piter from "../assets/piter.svg";
 import monopoly from "../assets/monopoly.svg";
 // Import Swiper styles
@@ -267,14 +253,22 @@ export default defineComponent({
       window.open("mailto:op.kgb@mail.ru", "_self");
     },
   },
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
+  components: {},
   data() {
     return {
       modules: [Autoplay, Pagination, Navigation],
-      swiper_items: [delko, karat, piter, mechet, monopoly, client],
+      swiper_items: [
+        {
+          img: delko,
+        },
+        { img: karat },
+        { img: piter },
+
+        { img: monopoly, text: "Логистическая платформа" },
+        { img: client, text: "СПб ЛОКБ" },
+        { img: mechet, text: 'СПб ГБУЗ "СЗЦККЛС"' },
+        { img: tornado, text: "Группа компаний ТОРНАДО" },
+      ],
       about_us: [
         {
           title: "100+",
@@ -375,6 +369,23 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  justify-content: space-between;
+
+  &-item-text {
+    font-weight: bold;
+  }
+}
+.sliders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .swiper-slide {
   text-align: center;
   font-size: 18px;
