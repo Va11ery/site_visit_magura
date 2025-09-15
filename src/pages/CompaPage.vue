@@ -52,14 +52,10 @@
           Лицензии и сертификаты
         </div>
       </div>
+
       <div style="padding-bottom: 100px">
         <div class="q-pa-xl bg-blue">
-          <n-image-group :theme-overrides="imageGroupThemeOverrides">
-            <n-space justify="space-around">
-              <n-image width="500" :src="lis_1" />
-              <n-image width="500" :src="lis_2" />
-            </n-space>
-          </n-image-group>
+          <PDF :src="lis_1" />
         </div>
       </div>
 
@@ -170,8 +166,9 @@
 </template>
 
 <script>
+import PDF from "pdf-vue3";
 import { defineComponent } from "vue";
-import { NImageGroup, NImage, useThemeVars, NSpace, NCarousel } from "naive-ui";
+import { NImageGroup, NImage, useThemeVars, NCarousel } from "naive-ui";
 export default defineComponent({
   name: "CompaPage",
   data() {
@@ -180,9 +177,9 @@ export default defineComponent({
     };
   },
   components: {
+    PDF,
     NImageGroup,
     NImage,
-    NSpace,
     NCarousel,
   },
   computed: {
@@ -199,8 +196,8 @@ export default defineComponent({
     },
   },
   setup() {
-    const lis_1 = new URL("../assets/lis_1.png", import.meta.url).href;
-    const lis_2 = new URL("../assets/lis_2.png", import.meta.url).href;
+    const lis_1 = new URL("../assets/license_1_merged.pdf", import.meta.url)
+      .href;
 
     const sout_kbg = (i) => {
       return new URL(`../assets/sout_kgb/sout_${i}.jpg`, import.meta.url).href;
@@ -217,7 +214,6 @@ export default defineComponent({
 
     return {
       lis_1,
-      lis_2,
       sout_kbg,
       sokol,
       gvardia,

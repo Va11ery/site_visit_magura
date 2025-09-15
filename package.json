@@ -17,6 +17,7 @@
     "@quasar/extras": "^1.0.0",
     "emailjs-com": "^3.2.0",
     "firebase": "^11.6.0",
+    "pdf-vue3": "^1.0.12",
     "push-dir": "^0.4.1",
     "quasar": "^2.6.0",
     "swiper": "^11.2.6",

@@ -11,6 +11,14 @@
                 <q-tooltip> ООО "ОО "КГБ"</q-tooltip>
               </q-avatar>
             </q-item-section>
+
+            <q-item-section avatar>
+              <q-avatar class="" size="6rem">
+                <img src="~/assets/chop.jpg" />
+                <q-tooltip> ООО "ЧОП "Гвардия" </q-tooltip>
+              </q-avatar>
+            </q-item-section>
+
             <q-item-section avatar>
               <q-avatar class="q-mr-sm" size="6rem">
                 <img src="~/assets/sk.jpg" />
@@ -18,9 +26,9 @@
               </q-avatar>
             </q-item-section>
             <q-item-section avatar>
-              <q-avatar class="q-mr-sm" size="6rem">
-                <img src="~/assets/chop.jpg" />
-                <q-tooltip> ООО "ЧОП "Гвардия" </q-tooltip>
+              <q-avatar class="q-mr-sm" size="7rem">
+                <img height="96" src="~/assets/logo_4.png" />
+                <q-tooltip> ООО "ЧОП "Беркут" </q-tooltip>
               </q-avatar>
             </q-item-section>
             <q-item-section>
