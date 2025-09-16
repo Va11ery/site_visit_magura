@@ -145,7 +145,7 @@ const sendEmail = async () => {
       from_phone: formData.value.phone,
       from_email: formData.value.email || "Не указан",
       message: formData.value.message,
-      to_email: "sau3000@mail.ru",
+      to_email: "op.kgb@mail.ru",
     };
 
     await emailjs.send(
